@@ -1,0 +1,72 @@
+		*********************
+		|  User Management  |
+		*********************
+-------------------------------------------------
+** Account Management:
+----------------------
+----------------------
+1. User account : identity of a user who
+		  use the system.
+2. super user 	: having complete permission.
+3. regular user	: having limited permission.	
+
+** User Management commands:
+============================
+
+	1. user add : create new user account.
+	2. userdel  : delete the user account.
+	3. usermod  : modify the user account.
+	4. chage    : user profile management.
+
+** User Management files:
+============================
+
+	1. /etc/passwd 	  : hold all details of 
+			    all users.
+	2. /etc/shadow 	  : hold all password of 
+			    all users in 
+			    encrypted format.
+	3. /etc/login.def : user for password 
+			    policy or aging.
+
+** User Management:
+===================
+
+	1.  create	2. delete	
+	3.  view id	4. modify
+	5.  lock/unlock	6. expire/extend
+	7.  view profile of the user account.
+	8.  bulk user Management.
+	9.  change password policy.
+	10. change login name.
+	11. change password.
+	12. 0 : root
+	13    - 999 reserve for system
+	1000 onward to the user.
+
+	
+------------------------------------------------- 
+		*********
+		|  lab  |
+		*********
+-------------------------------------------------
+1. hostname	2. hostnamectl set-hostname lsrv
+3. pwd		4. ls /home
+5. cat /etc/passwd
+6. less /etc/passwd
+7. head /etc/shadow
+8. tail /etc/login.defs
+9. vi /etc/login.defs
+	
+	[ here we can change password aging
+	  controls ]
+10. useradd tom		11. passwd tom
+12. passwd -d tom	13. ls /home
+14. userdel tom		15. userdel -r tom
+			    [ delete user
+			      with home files]
+16. chage -l tom	17. chage -E yyyy-mm-dd tom
+    [ it will show	    [ it will change 
+      policies  	      the expiry date
+      applied to 	      of tom account ]	
+      tom user ]	 	
